@@ -13,6 +13,8 @@
 
 An 808-line Matlab educational code for combined multi-scale topology optimisation and phasor-based dehomogenisation.
 
+![Image](https://github.com/user-attachments/assets/d7e01b38-1e2b-47bd-b104-63a833040819)
+
 ## Getting Started
 
 The code is documented in the paper: ["Woldseth, R.V., Sigmund, O. & Jensen, P.D.L. An 808 line phasor-based dehomogenisation Matlab code for multi-scale topology optimisation. Struct Multidisc Optim 67, 205 (2024)."](https://doi.org/10.1007/s00158-024-03880-1).

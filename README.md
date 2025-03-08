@@ -1,4 +1,3 @@
-# deHomTop808
 ```            
  ________       ___      ___  _____ ______       _____ ______       _________    ________     
 |\   ____\     |\  \    /  /||\   _ \  _   \    |\   _ \  _   \    |\___   ___\ |\   __  \    
@@ -10,18 +9,13 @@
    \|_________|                                                                               
                                                                                                                                                                                                                                                                
 ```
+## An easy‑to‑use univariate mapping‑based method for multi‑material topology optimization with implementation in MATLAB.
 
-An 808-line Matlab educational code for combined multi-scale topology optimisation and phasor-based dehomogenisation.
+`SVMMTO` provides the MATLAB implementation for 2D and 3D multi-material topology optimization using a single-variable interpolation model. Typically, it aimes at the minimum compliance problem while adhering to a total mass constraint.  
 
-![Image](https://github.com/user-attachments/assets/d7e01b38-1e2b-47bd-b104-63a833040819)
-
-## Getting Started
+## How to use
 
 The code is documented in the paper: ["Woldseth, R.V., Sigmund, O. & Jensen, P.D.L. An 808 line phasor-based dehomogenisation Matlab code for multi-scale topology optimisation. Struct Multidisc Optim 67, 205 (2024)."](https://doi.org/10.1007/s00158-024-03880-1).
-
-The code was developed and tested using MATLAB, version R2023b, including MATLAB Image Processing Toolbox.
-
-The code can also be executed without the MATLAB Image Processing Toolbox, but the behaviour may change, see paper for details.
 
 The program is executed with the function ```deHomTop808()```.
 
@@ -62,19 +56,12 @@ rhoPhys1 = deHomTop808(nelX,nelY,volFrac,rMin,wMin,wMax,0.5*dMin,deHomFrq,eval,T
 
 ## Help
 
-Please send your comments or questions to: pdlj@dtu.dk
-
-## Authors
-
-This Matlab code was written by R. V. Woldseth, O. Sigmund and P. D. L. Jensen,
-TopOpt Group, Department of Civil and Mechanical Engineering,
-Technical University of Denmark,
-DK-2800 Lyngby, Denmark.                                                
-
+Please send your comments or questions to: ding0420@bit.edu.cn
+                                           
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
-The authors acknowledge the financial support from the InnoTop VILLUM investigator project through the Villum Foundation and nTopology inc. Furthermore, the authors would like to express their gratitude to Dr. Federico Ferrari for valuable discussions during the preparation of this work.
+The author would like to thank Prof. Krister Svanberg (http://www.smoptit.se) for providing MATLAB codes of the MMA optimizer.

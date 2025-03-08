@@ -1,30 +1,78 @@
-# TOPress
-## TOPress: a MATLAB implementation for topology optimization of structures subjected to design‑dependent pressure loads
-`TOPress.m` provides a MATLAB implementation for topology optimization of structures subjected to design‑dependent pressure loads. Typically, a design-dependent load changes its direction, locationa and/or magnitude as topology optimization advances, and, thus, poses several unique challenges.   
-## About
-Author: Prabhat Kumar, Department of Mechanical and Aerospace Engineering, Indian Institute of Technology Hyderabad, India. Please send your comments and suggestions to  pkumar@mae.iith.ac.in or prabhatkumar.rns@gmail.com
-## How to use
-1. Please see the paper: [P. Kumar (2023) TOPress: a MATLAB implementation for topology optimization of structures subjected to design‑dependent pressure loads, Structural and Multidisciplinary Optimization, 66(4), 2023](https://link.springer.com/article/10.1007/s00158-023-03533-9)
-2. MMA setting:
-   
-  
-(i) TOPress uses the MMA written in 1999 and updated in the 2002 version. The mmasub function has the following form
-## [xmma,ymma,zmma,lam,xsi,eta,mu,zet,s,low,upp] = mmasub(m,n,iter,xval,xmin,xmax,xold1,xold2,f0val,df0dx,df0dx2,fval,dfdx,dfdx2,low,upp,a0,a,c,d);
- TOPress code calls it  on line 91 as
-## [xmma,~,~,~,~,~,~,~,~,low,upp]=mmasub(mMMA,nMMA,loop,xval,xminvec,xmaxvec,xold1,xold2,obj*normf,objsens(act),objsens(act)*0,Vol,dVol(act)',dVol(act)'*0,low,upp,a0,aMMA,cMMA,dMMA);
-(ii) 
-With the 2006 version of MMA, one can modify MMA call (line 91) to:
-## [xmma,~,~,~,~,~,~,~,~,low,upp]=mmasub(mMMA,nMMA,loop,xval,xminvec,xmaxvec,xold1,xold2,obj*normf,objsens(act),Vol,dVol(act)',low,upp,a0,aMMA,cMMA,dMMA);
-## Citation
-For citing the paper, please use the following bibtex format:
+# deHomTop808
 ```
-@article{kumar2023TOPress,
-  title={{TOPress}: a {MATLAB} implementation for topology optimization of structures subjected to design‑dependent pressure loads},
-  author={Kumar, Prabhat},
-  journal={Structural and Multidisciplinary Optimization},
-  volume={66},
-  number={4},
-  year={2023},
-  publisher={Springer}
-}
+  __          __  __                      ______                   __       __      __     
+ /\ \        /\ \/\ \                    /\__  _\                /'_ `\   /'__`\  /'_ `\   
+ \_\ \     __\ \ \_\ \    ___     ___ ___\/_/\ \/   ___   _____ /\ \L\ \ /\ \/\ \/\ \L\ \  
+ /'_` \  /'__`\ \  _  \  / __`\ /' __` __`\ \ \ \  / __`\/\ '__`\/_> _ <_\ \ \ \ \/_> _ <_ 
+/\ \L\ \/\  __/\ \ \ \ \/\ \L\ \/\ \/\ \/\ \ \ \ \/\ \L\ \ \ \L\ \/\ \L\ \\ \ \_\ \/\ \L\ \
+\ \___,_\ \____\\ \_\ \_\ \____/\ \_\ \_\ \_\ \ \_\ \____/\ \ ,__/\ \____/ \ \____/\ \____/
+ \/__,_ /\/____/ \/_/\/_/\/___/  \/_/\/_/\/_/  \/_/\/___/  \ \ \/  \/___/   \/___/  \/___/ 
+                                                            \ \_\                          
+                                                             \/_/                          
 ```
+
+An 808-line Matlab educational code for combined multi-scale topology optimisation and phasor-based dehomogenisation.
+
+## Getting Started
+
+The code is documented in the paper: ["Woldseth, R.V., Sigmund, O. & Jensen, P.D.L. An 808 line phasor-based dehomogenisation Matlab code for multi-scale topology optimisation. Struct Multidisc Optim 67, 205 (2024)."](https://doi.org/10.1007/s00158-024-03880-1).
+
+The code was developed and tested using MATLAB, version R2023b, including MATLAB Image Processing Toolbox.
+
+The code can also be executed without the MATLAB Image Processing Toolbox, but the behaviour may change, see paper for details.
+
+The program is executed with the function ```deHomTop808()```.
+
+Additional FE models are included in the repo:
+- ```prepFEA_cant()```
+- ```prepFEA_mbb()```
+- ```prepFEA_db()```
+
+Files for two-load bridge example includes:
+- ```twoLoadBridge_80_48_Rank3_data.mat```
+- ```getPas_2loadbridge.m```
+
+Below is a Matlab code snippet of how to use and execute the code for both multi-scale topology optimisation, on-the-fly phasor-based dehomogenisation and post dehomogenisation.
+
+### Matlab example
+```
+% Grid size
+nelX = 60; nelY = 30;
+% Volume fraction
+volFrac = 0.3;
+% Filter radius of thickness fields
+rMin = 2;
+% Relative thickness bounds
+wMin = 0.1; wMax = 1.0;
+% Dehomogenisation length-scale relative to element size
+dMin = 0.2;
+% Frequency of on-the-fly dehomogenisation
+deHomFrq = 20;
+% Post evaluation of dehomogenised result
+eval = true;
+
+%% Run multi-scale TO + dehomogenisation
+[rhoPhys0,TO] = deHomTop808(nelX,nelY,volFrac,rMin,wMin,wMax,dMin,deHomFrq,eval); 
+
+%% Re-run dehomogenisation with 0.5 dMin
+rhoPhys1 = deHomTop808(nelX,nelY,volFrac,rMin,wMin,wMax,0.5*dMin,deHomFrq,eval,TO); 
+```
+
+## Help
+
+Please send your comments or questions to: pdlj@dtu.dk
+
+## Authors
+
+This Matlab code was written by R. V. Woldseth, O. Sigmund and P. D. L. Jensen,
+TopOpt Group, Department of Civil and Mechanical Engineering,
+Technical University of Denmark,
+DK-2800 Lyngby, Denmark.                                                
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+The authors acknowledge the financial support from the InnoTop VILLUM investigator project through the Villum Foundation and nTopology inc. Furthermore, the authors would like to express their gratitude to Dr. Federico Ferrari for valuable discussions during the preparation of this work.

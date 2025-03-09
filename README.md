@@ -12,46 +12,25 @@
 
 `SVMMTO` provides the MATLAB implementation for 2D and 3D multi-material topology optimization using a single-variable interpolation model. Typically, it aimes at the minimum compliance problem while adhering to a total mass constraint.  
 
-## How to use
+## How to Use
 
 The code is documented in the paper: ["Wenjie Ding. An easy‑to‑use univariate mapping‑based method for multi‑material topology optimization with implementation in MATLAB. Struct Multidisc Optim 67, 205 (2025)."](https://doi.org/10.1007/s00158-025-03983-3).
 
-The program is executed with the function ```deHomTop808()```.
+- For 2D problems, use the ```SVMMTO_2D``` function
+- For 3D problems, use the ```SVMMTO_3D``` function
 
-Additional FE models are included in the repo:
-- ```prepFEA_cant()```
-- ```prepFEA_mbb()```
-- ```prepFEA_db()```
+Example Command for 2D Bridge Structure:
 
-Files for two-load bridge example includes:
-- ```twoLoadBridge_80_48_Rank3_data.mat```
-- ```getPas_2loadbridge.m```
-
-Below is a Matlab code snippet of how to use and execute the code for both multi-scale topology optimisation, on-the-fly phasor-based dehomogenisation and post dehomogenisation.
-
-### Matlab example
 ```
-% Grid size
-nelX = 60; nelY = 30;
-% Volume fraction
-volFrac = 0.3;
-% Filter radius of thickness fields
-rMin = 2;
-% Relative thickness bounds
-wMin = 0.1; wMax = 1.0;
-% Dehomogenisation length-scale relative to element size
-dMin = 0.2;
-% Frequency of on-the-fly dehomogenisation
-deHomFrq = 20;
-% Post evaluation of dehomogenised result
-eval = true;
-
-%% Run multi-scale TO + dehomogenisation
-[rhoPhys0,TO] = deHomTop808(nelX,nelY,volFrac,rMin,wMin,wMax,dMin,deHomFrq,eval); 
-
-%% Re-run dehomogenisation with 0.5 dMin
-rhoPhys1 = deHomTop808(nelX,nelY,volFrac,rMin,wMin,wMax,0.5*dMin,deHomFrq,eval,TO); 
+SVMMTO_2D(200, 100, 0.5, 4, [0.5, 0.7, 1]', [0.4, 0.6, 1]', 0.3);
 ```
+<div align="center">
+	<img src="./imgsrc/2D_Bridge.gif" width="50">
+</div>
+
+### Other Extensions
+
+
 
 ## Help
 

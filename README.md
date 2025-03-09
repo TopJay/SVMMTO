@@ -39,7 +39,24 @@ The code is documented in the paper: ["Wenjie Ding. An easy‑to‑use univariat
 
 ## Other Extensions
 
+The code can also be executed using a single-variable filtering strategy, see [paper](https://doi.org/10.1007/s00158-025-03983-3) for details.
 
+- For 2D problems, use the ```SVMMTO_2D_SF``` function:
+
+  ```
+  SVMMTO_2D_SF(200, 100, 0.5, 4, [0.5, 0.7, 1]', [0.4, 0.6, 1]', 0.3);
+  ```
+
+- For 3D problems, use the ```SVMMTO_3D_SF``` function:
+
+  ```
+  SVMMTO_3D_SF(40, 20, 10, 0.5, 4, [0.5, 0.7, 1]', [0.4, 0.6, 1]', 0.3);
+  ```
+
+<div align="center">
+	<img src="./Imgsrc/2D_Bridge_SF.gif" width=40%>
+	<img src="./Imgsrc/3D_Cantilever_SF.gif" width=40%>
+</div>
 
 ## Help
 

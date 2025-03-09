@@ -14,7 +14,7 @@
 
 ## How to use
 
-The code is documented in the paper: ["Woldseth, R.V., Sigmund, O. & Jensen, P.D.L. An 808 line phasor-based dehomogenisation Matlab code for multi-scale topology optimisation. Struct Multidisc Optim 67, 205 (2024)."](https://doi.org/10.1007/s00158-024-03880-1).
+The code is documented in the paper: ["Wenjie Ding. An easy‑to‑use univariate mapping‑based method for multi‑material topology optimization with implementation in MATLAB. Struct Multidisc Optim 67, 205 (2025)."](https://doi.org/10.1007/s00158-025-03983-3).
 
 The program is executed with the function ```deHomTop808()```.
 
@@ -64,3 +64,17 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgments
 
 The author would like to thank Prof. Krister Svanberg (http://www.smoptit.se) for providing MATLAB codes of the MMA optimizer.
+
+## Citation
+For citing the paper, please use the following bibtex format:
+```
+@article{kumar2023TOPress,
+  title={{TOPress}: a {MATLAB} implementation for topology optimization of structures subjected to design‑dependent pressure loads},
+  author={Kumar, Prabhat},
+  journal={Structural and Multidisciplinary Optimization},
+  volume={66},
+  number={4},
+  year={2023},
+  publisher={Springer}
+}
+```

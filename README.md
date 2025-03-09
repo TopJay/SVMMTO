@@ -66,7 +66,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 The author would like to thank Prof. Krister Svanberg (http://www.smoptit.se) for providing MATLAB codes of the MMA optimizer.
 
 ## Citation
-For citing the paper, please use the following bibtex format:
+If you've used SVMMTO in your research work or find it useful in any way, please consider to cite:
 ```
 @article{kumar2023TOPress,
   title={{TOPress}: a {MATLAB} implementation for topology optimization of structures subjected to design‑dependent pressure loads},

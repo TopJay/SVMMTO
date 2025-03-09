@@ -18,26 +18,26 @@ The code is documented in the paper: ["Wenjie Ding. An easy‑to‑use univariat
 
 - For 2D problems, use the ```SVMMTO_2D``` function
 
-  Example Command for 2D Bridge Structure:
+  Example Command for a Three-Phase Material 2D Bridge Design:
 
-```
-SVMMTO_2D(200, 100, 0.5, 4, [0.5, 0.7, 1]', [0.4, 0.6, 1]', 0.3);
-```
+  ```
+  SVMMTO_2D(200, 100, 0.5, 4, [0.5, 0.7, 1]', [0.4, 0.6, 1]', 0.3);
+  ```
 
 - For 3D problems, use the ```SVMMTO_3D``` function
 
-  Example Command for 3D Cantilever Structure:
+  Example Command for a Three-Phase Material 3D Cantilever Design:
 
-```
-SVMMTO_2D(200, 100, 0.5, 4, [0.5, 0.7, 1]', [0.4, 0.6, 1]', 0.3);
-```
+  ```
+  SVMMTO_3D(40, 20, 10, 0.5, 4, [0.5, 0.7, 1]', [0.4, 0.6, 1]', 0.3);
+  ```
 
-<div align="left">
+<div align="center">
 	<img src="./imgsrc/2D_Bridge.gif" width=40%>
 	<img src="./imgsrc/3D_Cantilever.gif" width=40%>
 </div>
 
-### Other Extensions
+## Other Extensions
 
 
 

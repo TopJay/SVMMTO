@@ -33,8 +33,8 @@ The code is documented in the paper: ["Wenjie Ding. An easy‑to‑use univariat
   ```
 
 <div align="center">
-	<img src="./imgsrc/2D_Bridge.gif" width=40%>
-	<img src="./imgsrc/3D_Cantilever.gif" width=40%>
+	<img src="./Imgsrc/2D_Bridge.gif" width=40%>
+	<img src="./Imgsrc/3D_Cantilever.gif" width=40%>
 </div>
 
 ## Other Extensions

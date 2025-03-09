@@ -17,15 +17,24 @@
 The code is documented in the paper: ["Wenjie Ding. An easy‑to‑use univariate mapping‑based method for multi‑material topology optimization with implementation in MATLAB. Struct Multidisc Optim 67, 205 (2025)."](https://doi.org/10.1007/s00158-025-03983-3).
 
 - For 2D problems, use the ```SVMMTO_2D``` function
-- For 3D problems, use the ```SVMMTO_3D``` function
 
-Example Command for 2D Bridge Structure:
+  Example Command for 2D Bridge Structure:
 
 ```
 SVMMTO_2D(200, 100, 0.5, 4, [0.5, 0.7, 1]', [0.4, 0.6, 1]', 0.3);
 ```
-<div align="center">
-	<img src="./imgsrc/2D_Bridge.gif" width="50">
+
+- For 3D problems, use the ```SVMMTO_3D``` function
+
+  Example Command for 3D Cantilever Structure:
+
+```
+SVMMTO_2D(200, 100, 0.5, 4, [0.5, 0.7, 1]', [0.4, 0.6, 1]', 0.3);
+```
+
+<div align="left">
+	<img src="./imgsrc/2D_Bridge.gif" width=40%>
+	<img src="./imgsrc/3D_Cantilever.gif" width=40%>
 </div>
 
 ### Other Extensions

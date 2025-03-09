@@ -58,9 +58,10 @@ The code can also be executed using a single-variable filtering strategy, see [p
 	<img src="./Imgsrc/3D_Cantilever_SF.gif" width=40%>
 </div>
 
-## Help
+## Contact
 
-Please send your comments or questions to: ding0420@bit.edu.cn
+For questions or comments, please contact:
+- Email: ding0420@bit.edu.cn
                                            
 ## License
 

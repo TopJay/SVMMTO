@@ -14,7 +14,7 @@
 
 ## How to Use
 
-The code is documented in the paper: ["Wenjie Ding. An easy‑to‑use univariate mapping‑based method for multi‑material topology optimization with implementation in MATLAB. Struct Multidisc Optim 67, 205 (2025)."](https://doi.org/10.1007/s00158-025-03983-3).
+The code is documented in the paper: ["Wenjie Ding. An easy‑to‑use univariate mapping‑based method for multi‑material topology optimization with implementation in MATLAB. Struct Multidisc Optim 68, 48 (2025)."](https://doi.org/10.1007/s00158-025-03983-3).
 
 - For 2D problems, use the ```SVMMTO_2D``` function
 
@@ -39,7 +39,7 @@ The code is documented in the paper: ["Wenjie Ding. An easy‑to‑use univariat
 
 ## Other Extensions
 
-The code can also be executed using a single-variable filtering strategy, see [paper](https://doi.org/10.1007/s00158-025-03983-3) for details.
+The code can also be executed using a single-variable filtering strategy, see [paper](https://www.researchgate.net/publication/389809400_An_easy-to-use_univariate_mapping-based_method_for_multi-material_topology_optimization_with_implementation_in_MATLAB) for details.
 
 - For 2D problems, use the ```SVMMTO_2D_SF``` function:
 
@@ -74,13 +74,13 @@ The author would like to thank Prof. Krister Svanberg (http://www.smoptit.se) fo
 ## Citation
 If you've used SVMMTO in your research work or find it useful in any way, please consider to cite:
 ```
-@article{kumar2023TOPress,
-  title={{TOPress}: a {MATLAB} implementation for topology optimization of structures subjected to design‑dependent pressure loads},
-  author={Kumar, Prabhat},
+@article{Ding2025SVMMTO,
+  title={An easy-to-use univariate mapping-based method for multi-material topology optimization with implementation in MATLAB},
+  author={Wenjie, Ding},
   journal={Structural and Multidisciplinary Optimization},
-  volume={66},
-  number={4},
-  year={2023},
+  volume={68},
+  number={48},
+  year={2025},
   publisher={Springer}
 }
 ```

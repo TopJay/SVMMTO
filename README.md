@@ -74,12 +74,12 @@ The author would like to thank Prof. Krister Svanberg (http://www.smoptit.se) fo
 ## Citation
 If you've used SVMMTO in your research work or find it useful in any way, please consider to cite:
 ```
-@article{Ding2025SVMMTO,
+@article{Ding2025_SVMMTO,
   title={An easy-to-use univariate mapping-based method for multi-material topology optimization with implementation in MATLAB},
   author={Wenjie, Ding},
   journal={Structural and Multidisciplinary Optimization},
   volume={68},
-  number={48},
+  page={48},
   year={2025},
   publisher={Springer}
 }

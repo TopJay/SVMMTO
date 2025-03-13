@@ -78,8 +78,9 @@ If you've used SVMMTO in your research work or find it useful in any way, please
   title={An easy-to-use univariate mapping-based method for multi-material topology optimization with implementation in MATLAB},
   author={Wenjie, Ding},
   journal={Structural and Multidisciplinary Optimization},
-  volume={68},
   page={48},
+  volume={68},
+  issue={3},
   year={2025},
   publisher={Springer}
 }
